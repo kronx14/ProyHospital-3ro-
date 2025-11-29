@@ -8,7 +8,7 @@ package ProyP;
  *
  * @author Paul_
  */
-public class Lista {
+public class Lista {//LISTA DE CITAS
     Nodo cab;
 
     public Lista(){
