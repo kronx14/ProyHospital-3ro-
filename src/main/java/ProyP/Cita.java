@@ -15,12 +15,17 @@ public class Cita {
     private String hora;
     private String fecha;
     private String nombre;
+    private String folio;
+    private String apellidos;
 
-    public Cita(String nombre,String hora, String fecha) {
+    public Cita(String nombre,String apellido , String hora, String fecha,String asunto) {
         this.estadoCita = true;
         this.hora = hora;
         this.fecha = fecha;
-        this.nombre=nombre;
+        this.nombre = nombre;
+        this.asunto = asunto;
+        this.folio = null;
+        this.apellidos = apellido;
     }
 
     public Cita getLiga() {
@@ -62,5 +67,29 @@ public class Cita {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
     
+    public String getFolio() {
+        return folio;
+    }
+
+    public void setFolio(String folio) {
+        this.folio = folio;
+    }
+        
 }

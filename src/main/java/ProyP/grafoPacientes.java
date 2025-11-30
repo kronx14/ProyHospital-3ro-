@@ -8,19 +8,24 @@ package ProyP;
  *
  * @author JESUS
  */
-public class ListaPacientes {
+public class grafoPacientes {
     Paciente cab;
     
-    public Paciente buscar(String exp){
-        Paciente aux;
-        for ( aux=cab;aux.getLigaD()!=null||!aux.getExpediente().equals(exp);aux=aux.getLigaD());
-        if(aux.getLigaD()==null){//No existe el paciente que se está buscando
-            return null;
+    public Paciente buscar(String exp) {
+        if (cab == null) return null;
+
+        Paciente aux = cab;
+
+        // Recorrer hasta encontrar el expediente o llegar al final
+        while (aux != null && !aux.getExpediente().equals(exp)) {
+            aux = aux.getLigaD();
         }
+
         return aux;
     }
-    public void insertFirst(String exp, String name, String lastN, String num) {
-    Paciente nvo=new Paciente(exp,name,lastN,num);
+    
+    public void insertFirst(String expediente, String name, String lastN) {
+    Paciente nvo=new Paciente(expediente, name,lastN);
     if(cab!=null){
         nvo.setLigaD(cab);
         cab.setLigaI(nvo);
@@ -29,8 +34,8 @@ public class ListaPacientes {
     else 
         cab = nvo;
     }
-    public void insertLast(String exp, String name, String lastN, String num){
-        Paciente nvo=new Paciente(exp,name,lastN,num);
+    public void insertLast(String expediente,String name, String lastN){
+        Paciente nvo=new Paciente(expediente,name,lastN);
         Paciente aux;
         if (cab == null) {
             cab=nvo;
@@ -63,6 +68,8 @@ public class ListaPacientes {
             else{
                 aux.getLigaI().setLigaD(aux.getLigaD());
                 aux.getLigaD().setLigaI(aux.getLigaI());
+                aux.setLigaD(null);
+                aux.setLigaI(null);
             }
     }
     

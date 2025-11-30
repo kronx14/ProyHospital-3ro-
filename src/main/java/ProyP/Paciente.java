@@ -11,7 +11,6 @@ import java.util.Arrays;
  */
 public class Paciente {
     private String expediente;
-    private int dato;
     private Cita liga[];
     private Paciente ligaI;
     private Paciente ligaD;
@@ -26,12 +25,11 @@ public class Paciente {
     private String ultimaVisita;
     private String estadoPaciente;
 
-    public Paciente(String expediente, String nombre, String apellidos, String telefono) {
-        this.expediente = expediente;
+    public Paciente(String expedient,String nombre, String apellidos) {
+        this.expediente = expedient;
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.telefono = telefono;
-        this.dato = 0;
+        this.telefono = "Sin telefono";
         this.edad = 0;
         this.fechaNacimiento = null;
         this.sexo = null;
@@ -39,7 +37,7 @@ public class Paciente {
         this.alergias = null;
         this.ultimaVisita = null;
         this.estadoPaciente = null;
-        this.liga = new Cita[1];
+        this.liga = new Cita[0];
         this.ligaI = null;
         this.ligaD = null;
     }
@@ -57,13 +55,6 @@ public class Paciente {
         this.expediente = expediente;
     }
     
-    public int getDato() {
-        return dato;
-    }
-
-    public void setDato(int dato) {
-        this.dato = dato;
-    }
     public Paciente getLigaI() {
         return ligaI;
     }
@@ -155,4 +146,12 @@ public class Paciente {
     public void setEstadoPaciente(String estadoPaciente) {
         this.estadoPaciente = estadoPaciente;
     }
+    
+    public Cita[] getListaCitas(){
+        return this.liga;
+    }
+    public void setListaCitas(Cita[] c){
+        liga = c;
+    }
+    
 }

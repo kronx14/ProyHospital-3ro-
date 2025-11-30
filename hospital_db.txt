@@ -1,0 +1,9 @@
+NULL;DIR-001;Dr. House;Gregory;Director General;Dirección;150000.00;555-0100;house@fox.com
+DIR-001;VACANTE-0.19738442271662016;[ PLAZA DISPONIBLE ];;Director Médico;Dirección Médica;0.00;;
+VACANTE-0.19738442271662016;JEF-CIR;Dr. Shepherd;Derek;Jefe de Cirugía;Quirófano;0.00;555-300;mcdreamy@greys.com
+VACANTE-0.19738442271662016;VACANTE-0.42703746729142233;[ PLAZA DISPONIBLE ];;Residente;Urgencias;0.00;;
+VACANTE-0.42703746729142233;ENF-002;Enf. Focker;Greg;Enfermero/a General;Urgencias;0.00;555-401;greg@focker.com
+VACANTE-0.42703746729142233;ola;sii;;Residente;;0.00;;
+VACANTE-0.42703746729142233;bop;jubojbobou;oubooboub;Director Médico;ubou;999.00;bobbp;uuobub
+VACANTE-0.42703746729142233;bibi;buibib;bibuib;Residente;;0.00;bibibu;bb
+DIR-001;DIR-ADM;Dr. Kelso;Bob;Director Administrativo;Administración;0.00;555-0102;kelso@scrubs.com
